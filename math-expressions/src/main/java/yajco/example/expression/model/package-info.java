@@ -1,5 +1,5 @@
 @Parser(
-    className = "yajco.example.parser.ExpressionParser",
+    className = "yajco.example.expression.parser.ExpressionParser",
     mainNode = "Expression",
     tokens = {
         @TokenDef(name = "PLUS", regexp = "[+]"),

@@ -3,7 +3,7 @@ package yajco.example.expression;
 import org.junit.Assert;
 import org.junit.Test;
 import yajco.example.expression.model.Expression;
-import yajco.example.parser.ExpressionParser;
+import yajco.example.expression.parser.ExpressionParser;
 
 public class IntegrationTest {
     @Test
