@@ -9,7 +9,7 @@ import yajco.example.imperative.model.expression.Variable;
 import yajco.model.pattern.impl.Associativity;
 
 public class Assignment extends BinaryOperation {
-    @Operator(associativity = Associativity.RIGHT)
+    @Operator(priority = 1, associativity = Associativity.RIGHT)
     public Assignment(Expression expression1, @Before("ASSIGN") Expression expression2) {
         super(expression1, expression2);
     }

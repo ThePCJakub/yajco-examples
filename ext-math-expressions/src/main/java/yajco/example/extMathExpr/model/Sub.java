@@ -4,7 +4,7 @@ import yajco.annotation.Before;
 import yajco.annotation.Operator;
 
 public final class Sub extends BinaryOperation {
-    @Operator()
+    @Operator(priority = 1)
     public Sub(Expression expression1, @Before("MINUS") Expression expression2) {
         super(expression1, expression2);
     }

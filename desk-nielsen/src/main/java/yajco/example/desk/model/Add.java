@@ -8,7 +8,7 @@ public final class Add extends Expression {
 
     private final Expression expression2;
 
-    @Operator()
+    @Operator(priority = 1)
     public Add(Expression expression1, @Before("+") Expression expression2) {
         this.expression1 = expression1;
         this.expression2 = expression2;

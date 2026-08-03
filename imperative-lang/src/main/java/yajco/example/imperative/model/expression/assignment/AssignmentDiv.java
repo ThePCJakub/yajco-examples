@@ -6,7 +6,7 @@ import yajco.annotation.Operator;
 import yajco.example.imperative.model.expression.Expression;
 
 public class AssignmentDiv extends AssignmentGeneric {
-    @Operator(associativity = Associativity.RIGHT)
+    @Operator(priority = 1, associativity = Associativity.RIGHT)
     public AssignmentDiv(Expression expression1, @Before("ASSIGNDIV") Expression expression2) {
         super(expression1, expression2);
     }

@@ -9,7 +9,7 @@ public final class Sub extends Expression {
 
     private final Expression expression2;
 
-    @Operator(associativity = Associativity.LEFT)
+    @Operator(priority = 1, associativity = Associativity.LEFT)
     public Sub(Expression expression1, @Before("MINUS") Expression expression2) {
         this.expression1 = expression1;
         this.expression2 = expression2;

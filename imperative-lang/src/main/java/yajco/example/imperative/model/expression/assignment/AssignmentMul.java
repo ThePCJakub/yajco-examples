@@ -6,7 +6,7 @@ import yajco.annotation.Operator;
 import yajco.example.imperative.model.expression.Expression;
 
 public class AssignmentMul extends AssignmentGeneric {
-    @Operator(associativity = Associativity.RIGHT)
+    @Operator(priority = 1, associativity = Associativity.RIGHT)
     public AssignmentMul(Expression expression1, @Before("ASSIGNMUL") Expression expression2) {
         super(expression1, expression2);
     }
