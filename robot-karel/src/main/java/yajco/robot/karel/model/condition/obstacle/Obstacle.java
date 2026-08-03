@@ -1,7 +1,7 @@
 package yajco.robot.karel.model.condition.obstacle;
 
-import yajco.robot.karel.runtime.World;
 import yajco.robot.karel.model.Condition;
+import yajco.robot.karel.runtime.World;
 
 public abstract class Obstacle extends Condition {
     private final boolean blocked;
@@ -18,6 +18,6 @@ public abstract class Obstacle extends Condition {
         int angle = (world.getKarel().getFacing().getAngle() + side) % 360;
         boolean result = world.isObstacleOn(world.angleToOffsetX(angle), world.angleToOffsetY(angle));
 
-        return blocked == result;
+        return blocked ? result : !result;
     }
 }

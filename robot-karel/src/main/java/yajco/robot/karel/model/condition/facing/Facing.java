@@ -19,7 +19,7 @@ public abstract class Facing extends Condition {
     }
 
     public boolean eval(World world) {
-        Direction facing = world.getKarel().getFacing();
-        return negate == (desiredDirection != facing);
+        boolean facing = desiredDirection == world.getKarel().getFacing();
+        return negate ? !facing : facing;
     }
 }
