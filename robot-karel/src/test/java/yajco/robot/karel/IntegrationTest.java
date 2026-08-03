@@ -12,6 +12,7 @@ import java.io.*;
 
 public class IntegrationTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final PrintStream originalOut = System.out;
 
     @Before
     public void setUpStreams() {
@@ -20,7 +21,7 @@ public class IntegrationTest {
 
     @After
     public void restoreStreams() {
-        System.setOut(System.out);
+        System.setOut(originalOut);
     }
 
     @Test
