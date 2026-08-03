@@ -8,10 +8,10 @@ import java.io.InputStreamReader;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        InputStream in = Main.class.getResourceAsStream("/karel.robot");
-        if (in == null) throw new RuntimeException("/karel.robot not found");
-
-        Robot robot = new Parser().parse(new InputStreamReader(in));
-        robot.run();
+        try (InputStream in = Main.class.getResourceAsStream("/karel.robot")) {
+            if (in == null) throw new RuntimeException("/karel.robot not found");
+            Robot robot = new Parser().parse(new InputStreamReader(in));
+            robot.run();
+        }
     }
 }
